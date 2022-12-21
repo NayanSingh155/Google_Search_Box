@@ -19291,7 +19291,7 @@ const data=[
 
 
 const icon=document.querySelector('.icon');
-const search=document.querySelector(".search");
+const search=document.querySelector(".wrapper");
 icon.onclick=function(){
 search.classList.toggle('active')
 }
