@@ -19225,7 +19225,7 @@ const data=[
   
   function append(data) {
     suggBox.innerHTML = null;
-    const search = document.querySelector(".input").value;
+    const searchInp = document.querySelector("#inp").value;
   
     data.map(function (el) {
       let p = document.createElement("p");
@@ -19241,10 +19241,10 @@ const data=[
       // console.log(p)
   
       suggBox.append(p);
-      if (search !== "") {
+      if (searchInp !== "") {
         suggBox.style.display = "block";
       }
-      if (search == "") {
+      if (searchInp == "") {
         suggBox.style.display = "none";
       }
     });
@@ -19256,9 +19256,9 @@ const data=[
     // console.log(data.length)
   }
   function get() {
-    const search = document.querySelector(".input").value;
+    const searchInp = document.querySelector("#inp").value;
     let filterData = data.filter(function (elem) {
-      return elem.countryName.includes(search);
+      return elem.countryName.includes(searchInp);
     });
     return filterData;
   }
